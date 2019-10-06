@@ -8,11 +8,15 @@ How to use the repo:
         npm i -g aws-cli
         ```
     * create function in a directory
-    * run "py -m pip install --target ./package GitPython"
+    * install needed packages:
+      ```
+      py -m pip install --target ./package GitPython
+      ```
     * package function and packages into a zip archive
       ```
       cd package
       zip -r9 C:\Users\artem\IdeaProjects\async-workers-lambda-scripts\lambdas\function.zip .
+      cd ..
       zip -g function.zip e2e_test_function.py
       ```
     * upload the archive to aws:

@@ -1,15 +1,14 @@
 from git import Repo
-import boto3
+from boto3 import client
 
 REGION = 'us-east-2'  # region to launch instance in
 AMI = 'ami-0b00e7f461c40ed19 amzn-ami-hvm-2018.03.0.20190514-x86_64-gp2'  # list of amis https://aws.amazon.com/amazon-linux-ami/
 INSTANCE_TYPE = 't2.micro'  # instance type to launch
 KEY_NAME = 'aws_keypair_raiden'
-IAM_INSTANCE_PROFILE = {'Arn': 'arn:aws:iam::650732200008:role/service-role/e2e_tests-role-23indkh6'},
+IAM_INSTANCE_PROFILE = {'Arn': 'arn:aws:iam::650732200008:role/service-role/e2e_tests-role-23indkh6'}
 SECURITY_GROUP_IDS = ['sg-0ab4a96e82d467408']
 
-ec2 = boto3.client('ec2', region_name=REGION)
-
+ec2 = client('ec2', region_name=REGION)
 
 def lambda_handler(event, context):
     project_name = event['github_project']
