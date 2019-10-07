@@ -3,6 +3,7 @@
 How to use the repo:
 * for creating and updating aws lambda functions in python ([aws_docs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)):
     * install python3
+    * install zip (or 7-zip)
     * install aws cli
         ```
         https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html#install-msi-on-windows
