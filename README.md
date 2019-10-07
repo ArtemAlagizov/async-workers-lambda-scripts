@@ -16,7 +16,7 @@ How to use the repo:
     * package function and packages into a zip archive
       ```
       cd package
-      zip -r9 C:\Users\artem\IdeaProjects\async-workers-lambda-scripts\lambdas\function.zip .
+      zip -r9 <path>\async-workers-lambda-scripts\lambdas\function.zip .
       cd ..
       zip -g function.zip e2e_test_function.py
       ```
