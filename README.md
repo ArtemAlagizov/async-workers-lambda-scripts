@@ -11,7 +11,7 @@ How to use the repo:
     * create function in a directory
     * install needed packages:
       ```
-      py -m pip install --target ./package GitPython
+      py -m pip install --target ./package GitPython boto3
       ```
     * package function and packages into a zip archive
       ```
