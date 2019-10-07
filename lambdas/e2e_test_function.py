@@ -5,8 +5,8 @@ import os
 import base64
 
 REGION = 'us-east-2'  # region to launch instance in
-AMI = 'ami-0b00e7f461c40ed19'  # list of amis https://aws.amazon.com/amazon-linux-ami/
-INSTANCE_TYPE = 't2.micro'  # instance type to launch
+AMI = 'ami-00c03f7f7f2ec15c3'  # list of amis https://aws.amazon.com/amazon-linux-ami/
+INSTANCE_TYPE = 't3.nano'  # instance type to launch
 KEY_NAME = 'aws_keypair_raiden'
 IAM_INSTANCE_PROFILE = {'Arn': 'arn:aws:iam::650732200008:instance-profile/SSMInstanceProfile'}
 SECURITY_GROUP_IDS = ['sg-0ab4a96e82d467408']
