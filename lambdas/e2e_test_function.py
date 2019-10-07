@@ -27,7 +27,9 @@ def lambda_handler(event, context):
     repo = Repo.clone_from(git_url, '/tmp/%s' % project_name)
     print("Repo %s" % repo)
     with open(script_path, "rb") as script_file:
-        encoded_string = base64.b64encode(script_file.read()).decode()
+        command_string = base64.b64encode(script_file.read()).decode()
+
+    print("SH: %s" % command_string)
 
     ec2.request_spot_instances(
         SpotPrice='0.1',
@@ -37,7 +39,7 @@ def lambda_handler(event, context):
             'ImageId': AMI,
             'KeyName': KEY_NAME,
             'InstanceType': INSTANCE_TYPE,
-            'UserData': encoded_string,
+            'UserData': command_string,
             'IamInstanceProfile': IAM_INSTANCE_PROFILE,
             'SecurityGroupIds': SECURITY_GROUP_IDS
         }
