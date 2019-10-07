@@ -5,7 +5,7 @@ How to use the repo:
     * install python3
     * install aws cli
         ```
-        npm i -g aws-cli
+        https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html#install-msi-on-windows
         ```
     * create function in a directory
     * install needed packages:
