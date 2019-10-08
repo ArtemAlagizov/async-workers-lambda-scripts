@@ -13,7 +13,7 @@ cd async-workers-lambda-scripts
 cd messages
 
 aws sns publish --message "ttt" --phone-number +31681440850 --region 'us-east-1'
-aws ses send-email --from sendah@aws.com --destination file://destination.json --message file://success_message.json
+aws ses send-email --from sendah@aws.com --destination file://destination.json --message file://success_message.json --region 'us-east-1'
 } || {
 # if tests are succesful => trigger lambda to tag docker images and upload dem images to docker hub
 ## aws lambda invoke --function-name ReleaseVersionUpdateFunction --invocation-type Event --payload "[JSON string here]"
