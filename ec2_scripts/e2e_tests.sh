@@ -9,6 +9,7 @@ sudo yum install -y git
 git clone https://github.com/ArtemAlagizov/async-workers-lambda-scripts.git
 # execute e2e tests
 # send logs and report through sns service (/var/log/user-data.log)
+cd async-workers-lambda-scripts
 cd messages
 
 aws sns publish --message "ttt" --phone-number +31681440850 --region 'us-east-1'
