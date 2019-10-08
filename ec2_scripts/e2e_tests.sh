@@ -18,6 +18,5 @@ aws ses send-email --from alagizov@gmail.com --destination file://destination.js
 # if tests are succesful => trigger lambda to tag docker images and upload dem images to docker hub
 ## aws lambda invoke --function-name ReleaseVersionUpdateFunction --invocation-type Event --payload "[JSON string here]"
 
-echo "test"
-# aws ec2 terminate-instances --instance-ids `curl http://169.254.169.254/latest/meta-data/instance-id` --region 'us-east-2'
+aws ec2 terminate-instances --instance-ids `curl http://169.254.169.254/latest/meta-data/instance-id` --region 'us-east-2'
 }
