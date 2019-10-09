@@ -18,7 +18,7 @@ aws ses send-email --from alagizov@gmail.com --destination file://destination.js
 
 } || {
 # log failure
-
+echo "inside catch"
 }
 
 aws ec2 terminate-instances --instance-ids `curl http://169.254.169.254/latest/meta-data/instance-id` --region 'us-east-2'
