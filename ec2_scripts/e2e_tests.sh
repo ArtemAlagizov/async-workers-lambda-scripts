@@ -12,7 +12,7 @@ git clone https://github.com/ArtemAlagizov/async-workers-lambda-scripts.git
 cd async-workers-lambda-scripts
 cd messages
 
-aws sns publish --message "e2e tests were successful, yo!" --phone-number +31681440850 --region 'us-east-1'
+#aws sns publish --message "e2e tests were successful" --phone-number +316XXXXXXXX --region 'us-east-1'
 aws ses send-email --from alagizov@gmail.com --destination file://destination.json --message file://success_message.json --region 'us-east-1'
 } || {
 # if tests are succesful => trigger lambda to tag docker images and upload dem images to docker hub
