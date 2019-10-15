@@ -23,4 +23,4 @@ exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
   echo "inside catch"
 }
 
-aws ec2 terminate-instances --instance-ids 'curl http://169.254.169.254/latest/meta-data/instance-id' --region 'us-east-2'
+aws ec2 terminate-instances --instance-ids `curl http://169.254.169.254/latest/meta-data/instance-id` --region 'us-east-2'
